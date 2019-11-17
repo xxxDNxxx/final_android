@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/p1Fragment">
+
+    <fragment
+        android:id="@+id/p1Fragment"
+        android:name="buu.informatics.s59160379.mytestapp.P1Fragment"
+        android:label="P1Fragment" />
+</navigation>

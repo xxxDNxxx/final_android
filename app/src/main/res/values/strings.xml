@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">mytestapp</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="name">Paiboonkiat_kiewneth</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
