@@ -6,4 +6,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="encrypt_txt">Encrypt</string>
+    <string name="output_string">Output</string>
+    <string name="input_string" />
+    <string name="hint_string">Input</string>
+    <string name="decrypt_string">Decrypt</string>
 </resources>
