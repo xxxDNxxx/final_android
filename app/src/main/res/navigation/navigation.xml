@@ -8,5 +8,31 @@
     <fragment
         android:id="@+id/p1Fragment"
         android:name="buu.informatics.s59160379.mytestapp.P1Fragment"
-        android:label="P1Fragment" />
+        android:label="P1Fragment" >
+        <action
+            android:id="@+id/action_p1Fragment_to_p2Fragment"
+            app:destination="@id/p2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/p2Fragment"
+        android:name="buu.informatics.s59160379.mytestapp.P2Fragment"
+        android:label="fragment_p2"
+        tools:layout="@layout/fragment_p2" >
+        <action
+            android:id="@+id/action_p2Fragment_to_abouutFragment"
+            app:destination="@id/abouutFragment" />
+        <action
+            android:id="@+id/action_p2Fragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/abouutFragment"
+        android:name="buu.informatics.s59160379.mytestapp.AbouutFragment"
+        android:label="fragment_abouut"
+        tools:layout="@layout/fragment_abouut" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="buu.informatics.s59160379.mytestapp.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
 </navigation>
