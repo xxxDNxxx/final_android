@@ -11,4 +11,5 @@
     <string name="input_string" />
     <string name="hint_string">Input</string>
     <string name="decrypt_string">Decrypt</string>
+    <string name="history_string">History</string>
 </resources>
