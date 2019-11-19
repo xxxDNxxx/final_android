@@ -2,6 +2,7 @@ package buu.informatics.s59160379.mytestapp
 
 
 import android.os.Bundle
+import android.util.Base64
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
@@ -20,7 +21,30 @@ class P2Fragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentP2Binding>(inflater,R.layout.fragment_p2,container,false)
         setHasOptionsMenu(true)
+
+        binding.encryptBtn.setOnClickListener {
+            var inputdatar = binding.inputTxt.text
+            var inpuut = inputdatar.toString()
+
+            binding.outputTxt.text = encodeData(inpuut)
+        }
+        binding.decryptBtn.setOnClickListener {
+            var inputdatar2 = binding.inputTxt.text
+            var inpuut2 = inputdatar2.toString()
+
+            binding.outputTxt.text = decodeData(inpuut2)
+        }
+
         return binding.root
+    }
+
+    private fun encodeData(inputdata:String): String{
+        val encoded = Base64.encode(inputdata.toByteArray(),Base64.DEFAULT)
+        return String(encoded)
+    }
+    private fun decodeData(inputdata:String): String{
+        val decoded = Base64.decode(inputdata.toByteArray(),Base64.DEFAULT)
+        return String(decoded,charset("UTF-8"))
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
