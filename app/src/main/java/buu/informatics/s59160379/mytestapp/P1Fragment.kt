@@ -23,7 +23,10 @@ class P1Fragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentP1Binding>(inflater,R.layout.fragment_p1,container,false)
 
         binding.playButton.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_p1Fragment_to_p2Fragment)
+            view?.findNavController()?.navigate(P1FragmentDirections.actionP1FragmentToP2Fragment())
+        }
+        binding.aboutButton.setOnClickListener {
+            view?.findNavController()?.navigate(P1FragmentDirections.actionP1FragmentToAbouutFragment())
         }
 
         return binding.root

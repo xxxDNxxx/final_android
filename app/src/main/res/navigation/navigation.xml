@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_p1Fragment_to_p2Fragment"
             app:destination="@id/p2Fragment" />
+        <action
+            android:id="@+id/action_p1Fragment_to_abouutFragment"
+            app:destination="@id/abouutFragment" />
     </fragment>
     <fragment
         android:id="@+id/p2Fragment"

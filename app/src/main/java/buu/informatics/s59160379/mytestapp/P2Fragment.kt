@@ -43,6 +43,9 @@ class P2Fragment : Fragment() {
 
             binding.outputTxt.text = decodeData(inpuut2)
         }
+        binding.historyBtn.setOnClickListener {
+            view?.findNavController()?.navigate(P2FragmentDirections.actionP2FragmentToHistoryFragment())
+        }
 
         return binding.root
     }
