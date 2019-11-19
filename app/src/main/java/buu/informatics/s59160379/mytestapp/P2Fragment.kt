@@ -4,6 +4,7 @@ package buu.informatics.s59160379.mytestapp
 import android.os.Bundle
 import android.util.Base64
 import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
@@ -24,12 +25,20 @@ class P2Fragment : Fragment() {
 
         binding.encryptBtn.setOnClickListener {
             var inputdatar = binding.inputTxt.text
+            if(inputdatar.isEmpty()){
+                Toast.makeText(context,"Please fill the blank",Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             var inpuut = inputdatar.toString()
 
             binding.outputTxt.text = encodeData(inpuut)
         }
         binding.decryptBtn.setOnClickListener {
             var inputdatar2 = binding.inputTxt.text
+            if(inputdatar2.isEmpty()){
+                Toast.makeText(context,"Please fill the blank",Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             var inpuut2 = inputdatar2.toString()
 
             binding.outputTxt.text = decodeData(inpuut2)
