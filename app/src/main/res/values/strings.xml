@@ -18,4 +18,5 @@
     <string name="md5output_string">Output</string>
     <string name="play1_string">Base64</string>
     <string name="play2_string">Binary</string>
+    <string name="share_string">Share</string>
 </resources>

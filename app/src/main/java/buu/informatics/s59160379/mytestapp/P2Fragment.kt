@@ -1,6 +1,7 @@
 package buu.informatics.s59160379.mytestapp
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Base64
 import android.view.*
@@ -20,9 +21,11 @@ class P2Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         val binding = DataBindingUtil.inflate<FragmentP2Binding>(inflater,R.layout.fragment_p2,container,false)
         setHasOptionsMenu(true)
-
+        var input_share = binding.inputTxt.text
+        var output_share = binding.outputTxt.text
         binding.encryptBtn.setOnClickListener {
             var inputdatar = binding.inputTxt.text
             if(inputdatar.isEmpty()){
@@ -32,6 +35,9 @@ class P2Fragment : Fragment() {
             var inpuut = inputdatar.toString()
 
             binding.outputTxt.text = encodeData(inpuut)
+            input_share = inputdatar
+            output_share = binding.outputTxt.text
+
         }
         binding.decryptBtn.setOnClickListener {
             var inputdatar2 = binding.inputTxt.text
@@ -42,6 +48,19 @@ class P2Fragment : Fragment() {
             var inpuut2 = inputdatar2.toString()
 
             binding.outputTxt.text = decodeData(inpuut2)
+            input_share = inputdatar2
+            output_share = binding.outputTxt.text
+        }
+        binding.share1Btn.setOnClickListener {
+            var input_share = binding.inputTxt.text
+            var output_share = binding.outputTxt.text
+
+            val intent = Intent()
+            intent.action = Intent.ACTION_SEND
+            intent.putExtra(Intent.EXTRA_TEXT,"Input:$input_share Output:$output_share")
+            intent.type = "text/plain"
+
+            startActivity(Intent.createChooser(intent,"Share to :"))
         }
 
 
@@ -60,12 +79,16 @@ class P2Fragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater?.inflate(R.menu.option_menu,menu)
+
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
         return NavigationUI.onNavDestinationSelected(item!!,view!!.findNavController())
                 ||super.onOptionsItemSelected(item)
     }
+
 
 
 }

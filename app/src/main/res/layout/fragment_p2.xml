@@ -57,6 +57,17 @@
             app:layout_constraintStart_toEndOf="@+id/encrypt_btn"
             app:layout_constraintTop_toBottomOf="@+id/input_txt" />
 
+        <Button
+            android:id="@+id/share1_btn"
+            android:layout_width="86dp"
+            android:layout_height="46dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/share_string"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="parent" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
