@@ -15,6 +15,9 @@
         <action
             android:id="@+id/action_p1Fragment_to_abouutFragment"
             app:destination="@id/abouutFragment" />
+        <action
+            android:id="@+id/action_p1Fragment_to_p3Fragment"
+            app:destination="@id/p3Fragment" />
     </fragment>
     <fragment
         android:id="@+id/p2Fragment"
@@ -38,4 +41,9 @@
         android:name="buu.informatics.s59160379.mytestapp.HistoryFragment"
         android:label="fragment_history"
         tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/p3Fragment"
+        android:name="buu.informatics.s59160379.mytestapp.P3Fragment"
+        android:label="fragment_p3"
+        tools:layout="@layout/fragment_p3" />
 </navigation>

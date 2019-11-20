@@ -26,7 +26,7 @@ class P1Fragment : Fragment() {
             view?.findNavController()?.navigate(P1FragmentDirections.actionP1FragmentToP2Fragment())
         }
         binding.aboutButton.setOnClickListener {
-            view?.findNavController()?.navigate(P1FragmentDirections.actionP1FragmentToAbouutFragment())
+            view?.findNavController()?.navigate(P1FragmentDirections.actionP1FragmentToP3Fragment())
         }
 
         return binding.root

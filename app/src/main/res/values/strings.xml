@@ -13,4 +13,9 @@
     <string name="decrypt_string">Decrypt</string>
     <string name="history_string">History</string>
     <string name="about_string">About this app</string>
+    <string name="Md5_txthint">Input</string>
+    <string name="md5hash_string">Hash</string>
+    <string name="md5output_string">Output</string>
+    <string name="play1_string">Base64</string>
+    <string name="play2_string">Binary</string>
 </resources>
