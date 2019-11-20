@@ -4,4 +4,5 @@
     <dimen name="about_txtsize">25sp</dimen>
     <dimen name="md5output_size">30sp</dimen>
     <dimen name="bioutput_size">25sp</dimen>
+    <dimen name="myname_size">20sp</dimen>
 </resources>
