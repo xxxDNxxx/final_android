@@ -20,6 +20,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/myname_txt"
+            android:layout_width="508dp"
+            android:layout_height="97dp"
+            android:text="@string/myname_string"
+            android:textSize="@dimen/bioutput_size"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="288dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

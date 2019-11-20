@@ -19,4 +19,5 @@
     <string name="play1_string">Base64</string>
     <string name="play2_string">Binary</string>
     <string name="share_string">Share</string>
+    <string name="myname_string">Created by: Paiboonkiat Kiewneth</string>
 </resources>
